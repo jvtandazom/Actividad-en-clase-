@@ -3,7 +3,10 @@ def conversion_temperatura(grad_cent):
     kelvin = 273.15 + grad_cent
     return fahrenheit, kelvin
 
-# Ejemplo de uso
-grados_celsius = 25
-fahrenheit_resultado, kelvin_resultado = conversion_temperatura(grados_celsius)
-print(f"{grados_celsius} grados Celsius son {fahrenheit_resultado} grados Fahrenheit y {kelvin_resultado} grados Kelvin.")
+# Solicitar al usuario el valor de la temperatura en grados Celsius
+try:
+    grados_celsius = float(input("Ingresa la temperatura en grados Celsius: "))
+    fahrenheit_resultado, kelvin_resultado = 2conversion_temperatura(grados_celsius)
+    print(f"{grados_celsius} grados Celsius son {fahrenheit_resultado} grados Fahrenheit y {kelvin_resultado} grados Kelvin.")
+except ValueError:
+    print("Por favor ingresa un número válido para la temperatura en grados Celsius.")
